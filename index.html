@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Kingdom of Huong Giang | Portfolio</title>
+<meta name="description" content="Vo Thi Huong Giang - Communications & Content Creator Portfolio">
+
+<!-- Fonts: fairy-tale display + soft readable body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Marcellus&family=Parisienne&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================= -->
+<!-- FAIRY-TALE STORYBOOK INTRO    -->
+<!-- ============================= -->
+<div id="book-intro" class="book-intro">
+
+  <!-- VIDEO BACKGROUND -->
+  <video class="intro-video" autoplay muted loop playsinline>
+    <source src="assets/videos/intro-castle.mp4" type="video/mp4">
+  </video>
+
+  <div class="intro-overlay"></div>
+
+  <div class="book" id="storybook">
+    <div class="book-cover">
+      <div class="cover-frame">
+        <p class="cover-eyebrow">Once upon a time...</p>
+
+        <h1 class="cover-title">
+          The Kingdom of <br>
+          Vo Thi Huong Giang
+        </h1>
+
+        <div class="cover-crest">✦</div>
+
+        <p class="cover-hint">
+          Tap to open the storybook
+        </p>
+      </div>
+    </div>
+
+    <div class="book-page page-left">
+      <p class="page-script">
+        In a land of quiet colors and gentle courage,
+      </p>
+    </div>
+
+    <div class="book-page page-right">
+      <p class="page-script">
+        a storyteller began to write her own tale...
+      </p>
+    </div>
+  </div>
+
+  <button id="skip-intro" class="skip-intro">
+    Skip ✦
+  </button>
+
+</div>
+
+<!-- Fairy dust cursor canvas -->
+<canvas id="fairy-dust"></canvas>
+
+<!-- ============================= -->
+<!-- FLOATING MUSIC PLAYER         -->
+<!-- ============================= -->
+<div class="music-box" id="music-box">
+  <button id="music-toggle" class="music-toggle" aria-label="Play or pause music">
+    <span class="music-icon note">♪</span>
+  </button>
+  <div class="music-info">
+    <p class="music-title">A Princess Theme</p>
+    <p class="music-status" id="music-status">Now Playing</p>
+  </div>
+  <div class="music-bars"><span></span><span></span><span></span><span></span></div>
+</div>
+<!-- THAY NHẠC VÀO ĐÂY: đổi đường dẫn src bên dưới thành file nhạc của bạn (mp3), nên chọn nhạc nhẹ nhàng kiểu dàn dây/hộp nhạc như OST Sofia the First -->
+<audio id="bgm" loop preload="auto">
+  <source src="assets/music/bgm.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============================= -->
+<!-- NAVIGATION                    -->
+<!-- ============================= -->
+<header class="site-header" id="site-header">
+  <a href="#home" class="logo">
+    <span class="logo-monogram">VH</span>
+    <span class="logo-text">VO THI HUONG GIANG<br><small>KINGDOM</small></span>
+  </a>
+
+  <nav class="nav-desktop">
+    <a href="#home" class="nav-link active" data-nav>Kingdom</a>
+    <a href="#about" class="nav-link" data-nav>About Me</a>
+    <a href="#experience" class="nav-link" data-nav>Experience</a>
+    <a href="#projects" class="nav-link" data-nav>Projects</a>
+    <a href="#contact" class="nav-link" data-nav>Royal Letter</a>
+  </nav>
+
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-mobile" id="nav-mobile">
+  <a href="#home" data-nav>👑 Kingdom</a>
+  <a href="#about" data-nav>📖 About Me</a>
+  <a href="#experience" data-nav>🗝️ Experience</a>
+  <a href="#projects" data-nav>✨ Projects</a>
+  <a href="#contact" data-nav>💌 Royal Letter</a>
+</nav>
+
+<!-- ============================= -->
+<!-- HOME                          -->
+<!-- ============================= -->
+<main>
+<section id="home" class="section hero-section">
+  <!-- THAY ẢNH CỦA BẠN VÀO ĐÂY: ảnh lâu đài fantasy tím làm nền cho toàn trang -->
+  <div class="castle-bg" style="background-image:url('assets/images/castle-bg.jpg');"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-portrait-wrap" data-reveal>
+      <div class="royal-frame">
+
+        <span class="sparkle s1"></span>
+        <span class="sparkle s2"></span>
+        <span class="sparkle s3"></span>
+        <span class="sparkle s4"></span>
+
+        <img src="assets/images/portrait-main.jpg"
+             alt="Vo Thi Huong Giang"
+             class="hero-portrait">
+
+</div>
+      <span class="frame-ribbon">Welcome to my kingdom</span>
+    </div>
+
+    <div class="hero-text" data-reveal>
+      <p class="eyebrow">✦ Welcome to ✦</p>
+      <h1 class="hero-title">The Kingdom<br>of <span>Huong Giang</span></h1>
+      <p class="hero-subtitle">A dreamer who believes in quiet observation, honest creativity, and stories told her own way.</p>
+      <a href="#about" class="royal-btn">Explore My Story <span>➜</span></a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span></span>
+    <p>Scroll to explore</p>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- ABOUT ME                      -->
+<!-- ============================= -->
+<section id="about" class="section about-section">
+  <div class="section-heading" data-reveal>
+    <p class="eyebrow">✦ Chapter I ✦</p>
+    <h2>About Me</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-portrait" data-reveal>
+      <div class="royal-frame small">
+        <!-- THAY ẢNH CỦA BẠN VÀO ĐÂY: ảnh giới thiệu bản thân -->
+        <img src="assets/images/portrait-about.jpg" alt="Huong Giang">
+      </div>
+    </div>
+
+    <div class="about-text" data-reveal>
+      <h3 class="scroll-name">Vo Thi Huong Giang</h3>
+      <p>I'm a third-year International Business student at the Foreign Trade University, with a deep love for communications and storytelling. </p>
+      <p>This portfolio is a collection of my projects, experiences, and creative journey — a place where ideas turn into stories and every challenge becomes a chance to grow. </p>
+      <p>Thank you for visiting, and welcome to my world.</p>
+
+      <div class="skill-columns">
+        <div class="skill-card">
+          <h4>Certifications</h4>
+          <ul>
+            <li>IELTS (2023) : 7.0</li>
+            <li>MOS (Word, Excel) (2025) : Word: 907/1000, Excel: 981/1000</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>Soft Skills</h4>
+          <ul>
+            <li>Communication & connection</li>
+            <li>Teamwork</li>
+            <li>Creative thinking</li>
+            <li>Proactive & responsible mindset</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>Languages</h4>
+          <ul>
+            <li>English</li>
+            <li>Chinese</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- EXPERIENCE                    -->
+<!-- ============================= -->
+<section id="experience" class="section experience-section">
+  <div class="section-heading" data-reveal>
+    <p class="eyebrow">✦ Chapter II ✦</p>
+    <h2>Experience & Extrac Curricular Activies</h2>
+    <p class="section-sub">Quests completed across the kingdom of student life</p>
+  </div>
+
+  <div class="experience-grid">
+
+    <article class="experience-card" data-reveal>
+      <div class="exp-thumb">
+        <img src="assets/images/exp-beautycharm.jpg" alt="Import-Export Intern">
+      </div>
+      <div class="exp-body">
+        <h3>Hoanh Son Group Joint Stock Company<br>2026</h3>
+        <p class="exp-role">Import-Export Intern</p>
+      </div>
+    </article>
+
+    <article class="experience-card" data-reveal>
+      <div class="exp-thumb">
+        <!-- THAY ẢNH CỦA BẠN VÀO ĐÂY: exp-tedx.jpg -->
+        <img src="assets/images/exp-tedx.jpg" alt="Vice Head of External Relations – 38 FTU Club">
+      </div>
+      <div class="exp-body">
+        <h3>Vice Head of External Relations – 38 FTU Club| 2025 – Now</h3>
+        <p class="exp-role">Led the organizing team for club events and coordinated event execution</p>
+        <p class="exp-role">Directly approached and negotiated with potential sponsors to secure event funding</p>
+        <p class="exp-role">Coordinated with external partners and maintained partnership relationships</p>
+        <div class="exp-links">
+          <!-- THAY LINK FANPAGE CỦA BẠN VÀO ĐÂY -->
+          <a href="https://www.tiktok.com/@tedx.ftuhanoi.official" target="_blank" rel="noopener" class="exp-link">TikTok ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="experience-card" data-reveal>
+      <div class="exp-thumb">
+        <!-- THAY ẢNH CỦA BẠN VÀO ĐÂY: exp-5tot.jpg -->
+        <img src="assets/images/exp-5tot.jpg" alt="External Relations Member – 38 FTU Club">
+      </div>
+      <div class="exp-body">
+        <h3>External Relations Member – 38 FTU Club<br>2024 – 2025</h3>
+        <p class="exp-role">Assisted in approaching sponsors and developing collaboration opportunities</p>
+        <p class="exp-role">Communicated and coordinated with external partners for club events</p>
+        <div class="exp-links">
+          <!-- THAY LINK FANPAGE CỦA BẠN VÀO ĐÂY -->
+          <a href="https://www.facebook.com/profile.php?id=61566074515789" target="_blank" rel="noopener" class="exp-link">Fanpage ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="experience-card" data-reveal>
+      <div class="exp-thumb">
+        <!-- THAY ẢNH CỦA BẠN VÀO ĐÂY: exp-5tot.jpg -->
+        <img src="assets/images/exp-5tot.jpg" alt="External Relations Member – Global Economics Club (GEC)">
+      </div>
+      <div class="exp-body">
+        <h3>External Relations Member – Global Economics Club (GEC)<br>2024 – 2025</h3>
+        <p class="exp-role">Supported communication and coordination with external partners</p>
+        <p class="exp-role">Assisted in developing partnerships and implementing club activities</p>
+        <div class="exp-links">
+          <!-- THAY LINK FANPAGE CỦA BẠN VÀO ĐÂY -->
+          <a href="https://www.facebook.com/profile.php?id=61566074515789" target="_blank" rel="noopener" class="exp-link">Fanpage ↗</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- EDUCATION                     -->
+<!-- ============================= -->
+<section id="projects" class="section projects-section">
+  <div class="section-heading" data-reveal>
+    <p class="eyebrow">✦ Chapter III ✦</p>
+    <h2>Education</h2>
+    <p class="section-sub">Selected work from FTU Student Union programs & personal projects</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <article class="project-card" data-reveal>
+      <div class="project-thumb">
+        <!-- THAY ẢNH DỰ ÁN CỦA BẠN VÀO ĐÂY -->
+        <img src="assets/images/project-beautycharm.jpg" alt="Foreign Trade University">
+      </div>
+      <div class="project-body">
+        <h3>Foreign Trade University</h3>
+        <p>Major in International Business Economics - High quality program</p>
+        <p>CGPA: 3.64/4.0</p>
+      </div>
+    </article>
+
+    <article class="project-card" data-reveal>
+      <div class="project-thumb">
+        <!-- THAY ẢNH DỰ ÁN CỦA BẠN VÀO ĐÂY -->
+        <img src="assets/images/project-tedx.jpg" alt="Ha Tinh High School for the Gifted">
+      </div>
+      <div class="project-body">
+        <h3>Ha Tinh High School for the Gifted</h3>
+        <p>Major in Mathematics</p>
+        <p>Mathematics Final Grade: 9.7 (Grade 10)</p>
+        <p>Mathematics Final Grade: 9.8 (Grade 11)</p>
+        <p>Mathematics Final Grade: 9.8 (Grade 12)</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- CONTACT                       -->
+<!-- ============================= -->
+<section id="contact" class="section contact-section">
+  <div class="contact-scroll" data-reveal>
+    <div class="contact-portrait">
+      <div class="royal-frame small">
+        <!-- THAY ẢNH CỦA BẠN VÀO ĐÂY -->
+        <img src="assets/images/portrait-contact.jpg" alt="Vo Thi Huong Giang">
+      </div>
+    </div>
+
+    <div class="contact-content">
+      <p class="eyebrow">✦ Final Chapter ✦</p>
+      <h2>A Letter to You</h2>
+      <p class="contact-quote">"Every story has the power to change the world."</p>
+      <p>Thank you for reading through my kingdom. If you'd like to collaborate, chat, or simply say hello, my royal mailbox is always open.</p>
+
+      <div class="contact-info">
+        <p>✉️ vthgiang140406@gmail.com</p>
+        <p>📞 0945 603 867</p>
+      </div>
+
+      <div class="social-icons">
+        <!-- THAY LINK MẠNG XÃ HỘI CỦA BẠN VÀO ĐÂY -->
+        <!-- <a href="https://www.linkedin.com/in/vo-thi-huong-giang/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">in</a> -->
+        <!-- <a href="https://www.instagram.com/_.dhangne._279/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">◎</a> -->
+        <a href="mailto:vthgiang140406@gmail.com" aria-label="Email" class="social-icon">✉</a>
+      </div>
+
+      <!-- THAY LINK FILE CV CỦA BẠN VÀO ĐÂY -->
+      <a href="assets/cv/CV.pdf" download class="royal-btn cv-btn">Download My CV <span>⬇</span></a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>✦ Made with love, ink, and a little bit of fairy dust - Vo Thi Huong Giang &copy; 2026 ✦</p>
+  </footer>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
