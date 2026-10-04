@@ -1,7 +1,3 @@
-/* =====================================================
-   THE KINGDOM OF MINH HẰNG — Interactions
-   ===================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Storybook Intro ---------- */
